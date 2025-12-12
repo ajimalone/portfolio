@@ -201,10 +201,14 @@ ul.details-list li::before {
     color: var(--accent-teal);
 }
 
+
+
 /* Skills Section */
 .skills-wrapper {
-    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
 }
+
 
 .skills-icons {
     display: flex;
