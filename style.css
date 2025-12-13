@@ -390,6 +390,35 @@ ul.details-list li::before {
     transform: translateY(0);
 }
 
+/* --- BUTTON STYLES --- */
+.btn-view {
+    /* 1. BACKGROUND COLOR (Currently Teal) */
+    background-color: #7ac7b6;
+
+    /* 2. TEXT COLOR (Currently Dark Blue) */
+    color: #0a0a3c;
+
+    /* Shape and Size settings */
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #7ac7b6;
+    /* Border matches background */
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT (When you move mouse over it) */
+.btn-view:hover {
+    background-color: transparent;
+    /* Makes background see-through */
+    color: #fff;
+    /* Changes text to white */
+    border-color: #7ac7b6;
+    /* Keeps the colored border */
+}
+
 
 /* --- 7. CERTIFICATIONS PAGE --- */
 .cert-grid {
