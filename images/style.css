@@ -1,0 +1,567 @@
+/* --- 1. GLOBAL VARIABLES & RESET --- */
+:root {
+    --primary-blue: #0a0a3c;
+    --accent-teal: #7ac7b6;
+    --accent-purple: #8a7ba8;
+    --text-light: #ffffff;
+    --text-muted: #d1d1d1;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-border-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(122, 199, 182, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 60%, rgba(138, 123, 168, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(122, 199, 182, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* --- 2. NAVIGATION --- */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    opacity: 1;
+    color: var(--accent-teal);
+}
+
+/* --- 3. HERO & PASSPORT SECTION --- */
+#hero {
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+/* Main container for Passport + Interests */
+.about-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+/* Passport Wrapper (controls size) */
+.passport-wrapper {
+    flex: 0 0 auto;
+    width: 350px;
+    max-width: 100%;
+}
+
+/* Passport Image (controls look/tilt) */
+.passport-img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-3deg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Hover Effect */
+.passport-wrapper:hover .passport-img {
+    transform: rotate(0) scale(1.05);
+}
+
+/* Glass Card Utility */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-border-radius);
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 4. The Interest Box (Glass Card) */
+.interests-lists {
+    flex: 1 1 auto;
+    /* Allow it to grow/shrink properly */
+    width: 100%;
+    /* Fill the space */
+    /* CHANGED: Reduced from 500px to 400px for a more compact desktop look */
+    max-width: 400px;
+    min-width: 300px;
+    /* Keep this to prevent squishing */
+}
+
+/* --- 4. DASHBOARD GRID --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--accent-teal);
+}
+
+.item-block {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--glass-border);
+}
+
+.item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.item-meta {
+    font-size: 0.9rem;
+    color: var(--accent-teal);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+ul.details-list {
+    list-style: none;
+    margin-left: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+ul.details-list li {
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+ul.details-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-teal);
+}
+
+
+
+/* Skills Section */
+.skills-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.skill-icon:hover {
+    color: var(--accent-teal);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.fa-figma {
+    color: #F24E1E;
+}
+
+.fa-html5 {
+    color: #E34F26;
+}
+
+.fa-js {
+    color: #F7DF1E;
+}
+
+.fa-css3-alt {
+    color: #1572B6;
+}
+
+/* Contact Section Wrapper */
+#contact {
+    padding: 4rem 0 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* centers everything */
+}
+
+/* Centers the whole block */
+.contact-section {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Title centered */
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* The card box (kept EXACTLY like your original style) */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+
+    /* left alignment INSIDE the box */
+    align-items: flex-start;
+
+    background: rgba(30, 30, 60, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 2.5rem 2rem;
+
+    border-radius: 20px;
+    gap: 1.5rem;
+
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact link styles */
+.contact-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+
+    white-space: nowrap;
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover {
+    transform: translateX(5px);
+}
+
+.contact-link i {
+    color: var(--accent-teal);
+    font-size: 1.4rem;
+    width: 40px;
+    margin-right: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .contact-section {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .contact-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+}
+
+
+/* --- 6. ARTWORKS PAGE --- */
+.art-category-title {
+    font-size: 2rem;
+    color: var(--accent-teal);
+    margin: 4rem 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Standard Art Grid (3 columns for posters/etc) */
+.art-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Logo Grid (4 columns side-by-side) */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Card Style for Art Items */
+.art-item {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+}
+
+.art-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.art-item:hover img {
+    transform: scale(1.05);
+}
+
+.art-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 60, 0.9);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.art-item:hover .art-overlay {
+    transform: translateY(0);
+}
+
+/* --- BUTTON STYLES --- */
+.btn-view {
+    /* 1. BACKGROUND COLOR (Currently Teal) */
+    background-color: #7ac7b6;
+
+    /* 2. TEXT COLOR (Currently Dark Blue) */
+    color: #0a0a3c;
+
+    /* Shape and Size settings */
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #7ac7b6;
+    /* Border matches background */
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT (When you move mouse over it) */
+.btn-view:hover {
+    background-color: transparent;
+    /* Makes background see-through */
+    color: #fff;
+    /* Changes text to white */
+    border-color: #7ac7b6;
+    /* Keeps the colored border */
+}
+
+
+/* --- 7. CERTIFICATIONS PAGE --- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.cert-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-teal);
+}
+
+.cert-badge-placeholder {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px dashed var(--accent-teal);
+    font-size: 3rem;
+    color: var(--accent-teal);
+}
+
+.cert-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cert-issuer {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Credly Button */
+.credly-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.credly-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #FF6B00;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    transition: 0.3s;
+}
+
+.credly-btn:hover {
+    background: #e65a00;
+    transform: scale(1.05);
+}
+
+
+/* --- 8. RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Stack Dashboard & Certs */
+    .dashboard-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack Artworks */
+    .art-grid {
+        column-count: 1;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust Hero */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-overview {
+        flex-direction: column;
+        /* Stacks passport on top of box */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .interests-lists {
+        width: 100%;
+        /* Full width on phone */
+        max-width: 400px;
+        /* Optional: keep it neat */
+        min-width: 300px;
+        /* Enforce size so text doesn't break */
+    }
+
+    .passport-wrapper {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .passport-img {
+        transform: rotate(0);
+    }
+
+    .interests-lists {
+        width: 100%;
+        min-width: auto;
+    }
+
+    /* Adjust Contact */
+    .contact-container {
+        padding: 2rem;
+        width: 100%;
+    }
+}
