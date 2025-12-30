@@ -21,205 +21,161 @@
                 <a href="index.html">Dashboard</a>
                 <a href="artworks.html" class="active">Artworks</a>
                 <a href="certifications.html">Certifications</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="#contact">Contact</a>
             </nav>
         </header>
 
-        <section id="hero" style="padding-bottom: 1rem;">
+        <section id="hero" style="padding-bottom: 4rem;">
             <h1 class="hero-title">My Artworks</h1>
             <p class="hero-subtitle">A collection of commissions, pixel art, 3D models, and personal projects.</p>
-
             <div style="margin-top: 1rem;">
-                <a href="#commissions" class="btn-view" style="margin: 5px;">Commissions</a>
-                <a href="#pixel" class="btn-view" style="margin: 5px;">Pixel Art</a>
-                <a href="#3d" class="btn-view" style="margin: 5px;">3D Models</a>
-                <a href="#personal" class="btn-view" style="margin: 5px;">Personal Works</a>
+                <a href="#commissions" class="btn-view">Commissions</a>
+                <a href="#pixel" class="btn-view">Pixel Art</a>
+                <a href="#logos" class="btn-view">Logos</a>
+                <a href="#3d" class="btn-view">3D Models</a>
+                <a href="#personal" class="btn-view">Personal</a>
             </div>
         </section>
 
-        <h2 id="commissions" class="art-category-title">01. Sample Commissions</h2>
-        <section class="art-grid">
-
-            <div class="art-item">
-                <img src="images/poster.jpg" alt="Ang Lihim ng Duyan Poster">
-                <div class="art-overlay">
-                    <h3>Ang Lihim ng Duyan</h3>
-                    <p>Film Poster Design</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <img src="images/backdrop.jpg" alt="Backdrop">
-                <div class="art-overlay">
-                    <h3>Live Pubmats</h3>
-                    <p>Backdrop for Watch Party</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <img src="images/batanes.jpg" alt="Explore Batanes Brochure">
-                <div class="art-overlay">
-                    <h3>Explore Batanes</h3>
+        <section id="commissions" class="split-container">
+            <div class="split-content">
+                <h2 class="split-title">01.<br>Commissions</h2>
+                <div class="split-description">
                     <p>Travel Agency Brochure</p>
+                    <p>Film Poster Design</p>
+                    <p>Event Backdrops</p>
+                </div>
+                <div class="split-thumbnails-label">click to view:</div>
+
+                <div class="thumbnail-row">
+                    <img src="images/batanes.jpg" class="thumb-img"
+                        onclick="changeImage('commissions-img', 'images/batanes.jpg')">
+                    <img src="images/poster.jpg" class="thumb-img"
+                        onclick="changeImage('commissions-img', 'images/poster.jpg')">
+                    <img src="images/backdrop.jpg" class="thumb-img"
+                        onclick="changeImage('commissions-img', 'images/backdrop.jpg')">
+                    <img src="images/rainforest.jpg" class="thumb-img"
+                        onclick="changeImage('commissions-img', 'images/rainforest.jpg')">
                 </div>
             </div>
 
-            <div class="art-item">
-                <img src="images/rainforest.jpg" alt="Rainforest Poster">
-                <div class="art-overlay">
-                    <h3>Rainforest Poster</h3>
-                    <p>STS Poster Homework</p>
-                </div>
+            <div class="split-visual">
+                <img id="commissions-img" src="images/batanes.jpg" alt="Featured Commission" class="main-feature-img">
             </div>
-
         </section>
 
-        <h2 id="pixel" class="art-category-title">02. Pixel Art</h2>
-        <section class="art-grid">
-
-            <div class="art-item">
-                <img src="images/pixel.jpg" alt="Pixel Art Collection">
-                <div class="art-overlay">
-                    <h3>IsKoolToura Pixel Art Collection</h3>
-                    <p>Sample of Character Designs & Game Assets</p>
+        <section id="pixel" class="split-container">
+            <div class="split-content">
+                <h2 class="split-title">02.<br>Pixel Art</h2>
+                <div class="split-description">
+                    <p>Game Assets</p>
+                    <p>Character Sprites</p>
+                    <p>IsKoolToura Collection</p>
+                    <p>Environmental Design</p>
                 </div>
             </div>
-
+            <div class="split-visual">
+                <img src="images/pixel.jpg" alt="Pixel Art Collection" class="main-feature-img">
+            </div>
         </section>
 
-        <h2 id="logos" class="art-category-title">03. Logos</h2>
+        <section id="logos" class="split-container">
+            <div class="split-content">
+                <h2 class="split-title">03.<br>Logos</h2>
+                <div class="split-description">
+                    <p>Brand Identity</p>
+                    <p>App Icons</p>
+                    <p>Organization Seals</p>
+                    <p>Vector Illustrations</p>
+                </div>
+                <div class="split-thumbnails-label">click to view:</div>
 
-        <section class="logo-grid">
-
-            <div class="art-item">
-                <img src="images/threap.png" alt="Threap Logo">
-                <div class="art-overlay">
-                    <h3>Threap</h3>
-                    <p>Online Thrift Store</p>
+                <div class="thumbnail-row">
+                    <img src="images/threap.png" class="thumb-img"
+                        onclick="changeImage('logos-img', 'images/threap.png')">
+                    <img src="images/IsKoolToura.png" class="thumb-img"
+                        onclick="changeImage('logos-img', 'images/IsKoolToura.png')">
+                    <img src="images/IsKoolToura-icon.png" class="thumb-img"
+                        onclick="changeImage('logos-img', 'images/IsKoolToura-icon.png')">
+                    <img src="images/CNIMedia.png" class="thumb-img"
+                        onclick="changeImage('logos-img', 'images/CNIMedia.png')">
                 </div>
             </div>
-
-            <div class="art-item">
-                <img src="images/IsKoolToura.png" alt="IsKoolToura Logo">
-                <div class="art-overlay">
-                    <h3>IsKoolToura</h3>
-                    <p>Game Title</p>
-                </div>
+            <div class="split-visual">
+                <img id="logos-img" src="images/threap.png" alt="Threap Logo" class="main-feature-img">
             </div>
-
-            <div class="art-item">
-                <img src="images/IsKoolToura-icon.png" alt="IsKoolToura Icon">
-                <div class="art-overlay">
-                    <h3>App Icon</h3>
-                    <p>IsKoolToura</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <img src="images/CNIMedia.png" alt="CNIMedia Logo">
-                <div class="art-overlay">
-                    <h3>CNIMedia</h3>
-                    <p>Media Org</p>
-                </div>
-            </div>
-
         </section>
 
-        <h2 id="3d" class="art-category-title">04. 3D Models</h2>
-        <section class="art-grid">
+        <section id="3d" class="split-container">
+            <div class="split-content">
+                <h2 class="split-title">04.<br>3D Models</h2>
+                <div class="split-description">
+                    <p>AR-Ready Assets</p>
+                    <p>Historical Monuments</p>
+                    <p>IsKoolToura Assets</p>
+                    <p>Interactive Renders</p>
+                </div>
+                <div class="split-thumbnails-label">click to view model:</div>
 
-            <div class="art-item">
-                <model-viewer src="images/church-v1.glb" alt="Immaculate Church 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
-                </model-viewer>
-                <div class="art-overlay">
-                    <h3>Immaculate Church</h3>
-                    <p>Interactive 3D Render</p>
+                <div class="thumbnail-row">
+                    <img src="images/revolving.png" class="thumb-img" onclick="changeModel('images/rev-v1.glb')">
+                    <img src="images/rizal.png" class="thumb-img"
+                        onclick="changeModel('images/rizal-compressed-v1.glb')">
+                    <img src="images/tisa.png" class="thumb-img" onclick="changeModel('images/bnt-v1.glb')">
+                    <img src="images/dimas.png" class="thumb-img" onclick="changeModel('images/dma-v1.glb')">
+                    <img src="images/church.png" class="thumb-img" onclick="changeModel('images/church-v1.glb')">
                 </div>
             </div>
 
-            <div class="art-item">
-                <model-viewer src="images/rizal-compressed-v1.glb" alt="Rizal Monument 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
+            <div class="split-visual">
+                <model-viewer id="main-3d-viewer" src="images/rev-v1.glb" alt="Featured 3D Model" camera-controls
+                    auto-rotate shadow-intensity="1" loading="lazy"
+                    style="width: 100%; height: 500px; background-color: transparent;">
                 </model-viewer>
-                <div class="art-overlay">
-                    <h3>Rizal Monument</h3>
-                    <p>Interactive 3D Render</p>
-                </div>
             </div>
-
-            <div class="art-item">
-                <model-viewer src="images/dma-v1.glb" alt="Dimas-alang 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
-                </model-viewer>
-                <div class="art-overlay">
-                    <h3>Dimas-alang</h3>
-                    <p>Interactive 3D Render</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <model-viewer src="images/bnt-v1.glb" alt="Bahay na Tisa 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
-                </model-viewer>
-                <div class="art-overlay">
-                    <h3>Bahay na Tisa</h3>
-                    <p>Interactive 3D Render</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <model-viewer src="images/rev-v1.glb" alt="Revolving Tower 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
-                </model-viewer>
-                <div class="art-overlay">
-                    <h3>Revolving Tower</h3>
-                    <p>Interactive 3D Render</p>
-                </div>
-            </div>
-
-            <div class="art-item">
-                <model-viewer src="images/boni-v1.glb" alt="Bonifacio Monument 3D" camera-controls auto-rotate
-                    shadow-intensity="1" loading="lazy" style="width: 100%; height: 350px; background-color: #0a0a3c;">
-                </model-viewer>
-                <div class="art-overlay">
-                    <h3>Andres Bonifacio</h3>
-                    <p>Interactive 3D Render</p>
-                </div>
-            </div>
-
         </section>
 
-        <h2 id="personal" class="art-category-title">05. Personal Works</h2>
-        <section class="art-grid">
+        <section id="personal" class="split-container">
+            <div class="split-content">
+                <h2 class="split-title">05.<br>Personal Works</h2>
+                <div class="split-description">
+                    <p>Digital Art Studies</p>
+                    <p>Fan Art Illustrations</p>
+                    <p>Concept Sketches</p>
+                    <p>Creative Experiments</p>
+                </div>
+                <div class="split-thumbnails-label">click to view:</div>
 
-            <div class="art-item">
-                <img src="images/timbs.png" alt="Timbs Artwork">
-                <div class="art-overlay">
-                    <h3>Timberland</h3>
-                    <p>Digital Art Study</p>
+                <div class="thumbnail-row">
+                    <img src="images/timbs.png" class="thumb-img" onclick="changeImage('c-img', 'images/timbs.png')">
+                    <img src="images/aa.jpg" class="thumb-img" onclick="changeImage('c-img', 'images/aa.jpg')">
+                    <img src="images/mugiwara.png" class="thumb-img"
+                        onclick="changeImage('c-img', 'images/mugiwara.png')">
                 </div>
             </div>
-
-            <div class="art-item">
-                <img src="images/aa.jpg" alt="AA Artwork">
-                <div class="art-overlay">
-                    <h3>A&A</h3>
-                    <p>Personal Illustration</p>
-                </div>
+            <div class="split-visual">
+                <img id="c-img" src="images/timbs.png" alt="Timberland Art" class="main-feature-img">
             </div>
-
-            <div class="art-item">
-                <img src="images/mugiwara.png" alt="Mugiwara Artwork">
-                <div class="art-overlay">
-                    <h3>Mugiwara One Piece</h3>
-                    <p>Fan Art</p>
-                </div>
-            </div>
-
         </section>
+
+
 
     </div>
+    <script>
+        // Function to change standard images (Commissions, Personal, etc.)
+        function changeImage(featureId, newSource) {
+            document.getElementById(featureId).src = newSource;
+        }
+
+        // Function to change 3D models
+        function changeModel(newSource) {
+            const viewer = document.getElementById('main-3d-viewer');
+            viewer.src = newSource;
+        }
+    </script>
+</body>
+
+</html>
 </body>
 
 </html>

@@ -328,87 +328,6 @@ ul.details-list li::before {
     }
 }
 
-
-/* --- 6. ARTWORKS PAGE --- */
-.art-category-title {
-    font-size: 2rem;
-    color: var(--accent-teal);
-    margin: 4rem 0 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--glass-border);
-    font-family: 'Roboto Mono', monospace;
-}
-
-/* Standard Art Grid (3 columns for posters/etc) */
-.art-grid {
-    column-count: 3;
-    column-gap: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-/* Logo Grid (4 columns side-by-side) */
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-/* Card Style for Art Items */
-.art-item {
-    margin-bottom: 1.5rem;
-    break-inside: avoid;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-}
-
-.art-item img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.art-item:hover img {
-    transform: scale(1.05);
-}
-
-.art-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(10, 10, 60, 0.9);
-    padding: 1rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.art-item:hover .art-overlay {
-    transform: translateY(0);
-}
-
-/* --- BUTTON STYLES --- */
-.btn-view {
-    /* 1. BACKGROUND COLOR (Currently Teal) */
-    background-color: #7ac7b6;
-
-    /* 2. TEXT COLOR (Currently Dark Blue) */
-    color: #0a0a3c;
-
-    /* Shape and Size settings */
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    border: 2px solid #7ac7b6;
-    /* Border matches background */
-    transition: all 0.3s ease;
-}
-
 /* HOVER EFFECT (When you move mouse over it) */
 .btn-view:hover {
     background-color: transparent;
@@ -566,38 +485,130 @@ ul.details-list li::before {
     }
 }
 
-/* --- 3D MODEL VIEWER STYLES --- */
-.model-poster {
+/* --- HERO BUTTONS --- */
+.btn-view {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-teal);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-view:hover {
+    background: var(--accent-teal);
+    color: #0a0a3c;
+}
+
+/* --- CANVA STYLE SPLIT LAYOUT (Applies to 01-05) --- */
+.split-container {
+    display: flex;
+    align-items: flex-start;
+    /* Align to top */
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle divider */
+    flex-wrap: wrap;
+}
+
+/* Left Side Content */
+.split-content {
+    flex: 1;
+    min-width: 300px;
+    padding-top: 20px;
+    /* Aligns text slightly lower */
+}
+
+.split-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.split-description p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    color: #d1d1d1;
+    margin-bottom: 0.8rem;
+    border-left: 2px solid var(--accent-teal);
+    padding-left: 15px;
+}
+
+.split-thumbnails-label {
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.thumb-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumb-img:hover {
+    transform: scale(1.1);
+    border-color: var(--accent-teal);
+    z-index: 2;
+}
+
+/* Right Side Visuals */
+.split-visual {
+    flex: 1.2;
+    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.main-feature-img {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Model specific override */
+model-viewer {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
+    height: 500px;
+    border-radius: 20px;
+    background-color: transparent;
+    /* No background for clean look */
 }
 
-.model-btn {
-    padding: 12px 24px;
-    border-radius: 30px;
-    background: #7ac7b6;
-    /* Your Teal Color */
-    color: #0a0a3c;
-    /* Your Dark Blue */
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Roboto Mono', monospace;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+/* Responsive */
+@media (max-width: 900px) {
+    .split-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
 
-.model-btn:hover {
-    transform: scale(1.05);
-    background: #fff;
+    .split-title {
+        font-size: 2.5rem;
+    }
+
+    .split-visual {
+        width: 100%;
+    }
 }
