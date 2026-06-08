@@ -31,6 +31,35 @@ header {
     gap: 40px;
 }
 
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    fill: #a0aec0;
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon:hover .nav-icon {
+    fill: #00d2ff;
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6));
+}
+
 .logo {
     width: 40px;
     height: 30px;
@@ -616,16 +645,13 @@ html {
 
 /*MORE PROJECTS*/
 .more-projects-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: -10px;
+    padding-top: 0;
 }
 
 .more-projects-container {
     width: 100%;
     max-width: 1000px;
-    padding: 0px 40px;
+    padding: 40px 40px;
     margin: 0 auto;
 }
 
@@ -649,14 +675,14 @@ html {
 }
 
 .mp-header h2 {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 2rem;
     font-weight: 700;
     color: #ffffff;
 }
 
 .mp-header .line {
-    margin-top: 50px;
+    margin-top: 15px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2);
     flex: 1;
