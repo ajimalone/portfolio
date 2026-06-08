@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks - Aji</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body class="artworks-page-body">
+    <main class="artworks-page-container">
+
+        <div id="3d-models" class="art-category">
+            <div class="art-cat-header">
+                <a href="index.html#art" class="back-arrow">&larr;</a>
+                <h2>/ 3d models</h2>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-wrapper">
+
+                <model-viewer id="main-3d-viewer" src="artworks_imgs/more-artworks/3d/rev-v1.glb"
+                    data-preview="artworks_imgs\more-artworks\3d\revolving.png" alt="A 3D model" auto-rotate
+                    camera-controls class="gallery-main" shadow-intensity="1">
+                </model-viewer>
+
+                <div class="gallery-thumbs">
+                    <img src="artworks_imgs/more-artworks/3d/tisa.png"
+                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/bnt-v1.glb')" class="thumb-img">
+
+                    <img src="artworks_imgs\more-artworks\3d\church.png"
+                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/church-v1.glb')" class="thumb-img">
+
+                    <img src="artworks_imgs\more-artworks\3d\dimas.png"
+                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/dma-v1.glb')" class="thumb-img">
+
+                    <img src="artworks_imgs\more-artworks\3d\rizal.png"
+                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/rizal-compressed-v1.glb')"
+                        class="thumb-img">
+                </div>
+            </div>
+        </div>
+
+        <div id="commissions" class="art-category">
+            <div class="art-cat-header">
+                <h2>/ commissions</h2>
+                <div class="line"></div>
+                <a href="#" class="view-more-link">Click here to view more</a>
+            </div>
+            <div class="gallery-wrapper">
+                <img id="main-comm" src="artworks_imgs\more-artworks\commish\aprilreads1.png" alt="Commission Main"
+                    class="gallery-main">
+                <div class="gallery-thumbs">
+                    <img src="artworks_imgs\more-artworks\commish\batanes.jpg" onclick="swapImage(this, 'main-comm')"
+                        class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\commish\backdrop.jpg" onclick="swapImage(this, 'main-comm')"
+                        class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\commish\plp2.png" onclick="swapImage(this, 'main-comm')"
+                        class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\commish\poster.jpg" onclick="swapImage(this, 'main-comm')"
+                        class="thumb-img">
+                </div>
+            </div>
+        </div>
+
+        <div id="pixel-art" class="art-category">
+            <div class="art-cat-header">
+                <h2>/ pixel art</h2>
+                <div class="line"></div>
+                <a href="#" class="view-more-link">Click here to view more</a>
+            </div>
+            <div class="gallery-wrapper">
+                <img src="artworks_imgs\more-artworks\pixel.jpg" alt="Pixel Art Main" class="gallery-main full-width">
+                <div class="gallery-thumbs">
+                    <img src="artworks_imgs\aa.jpg" onclick="swapImage(this, 'main-pixel')" class="thumb-img">
+                </div>
+            </div>
+        </div>
+
+        <div id="logos" class="art-category">
+            <div class="art-cat-header">
+                <h2>/ logos</h2>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-wrapper">
+                <img id="main-logo" src="artworks_imgs\more-artworks\logo\IsKoolToura.png" alt="Logo Main"
+                    class="gallery-main">
+                <div class="gallery-thumbs">
+                    <img src="artworks_imgs\more-artworks\logo\CNIMedia.png" onclick="swapImage(this, 'main-logo')"
+                        class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\logo\IsKoolToura-icon.png"
+                        onclick="swapImage(this, 'main-logo')" class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\logo\threap.png" onclick="swapImage(this, 'main-logo')"
+                        class="thumb-img">
+                    <img src="artworks_imgs\more-artworks\logo\IsKoolToura.png" onclick="swapImage(this, 'main-logo')"
+                        class="thumb-img">
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

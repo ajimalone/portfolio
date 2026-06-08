@@ -4,222 +4,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aji | Personal Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Aji Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="container">
-        <header>
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo-link">
+                <img src="shork.png" alt="Shark Logo" class="logo">
+            </a>
             <nav>
-                <a href="index.html" class="active">Works</a>
-                <a href="artworks.html">Artworks</a>
-                <a href="certifications.html">Certifications</a>
-                <a href="#contact">Contact</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#art">Art</a></li>
+                    <li><a href="#certification">Certification</a></li>
+                </ul>
             </nav>
-        </header>
+        </div>
+        <div class="header-right">
+            <a href="#"><img src="placeholder-email.png" alt="Email" class="social-icon"></a>
+            <a href="#"><img src="placeholder-github.png" alt="GitHub" class="social-icon"></a>
+            <a href="#"><img src="placeholder-linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        </div>
+    </header>
 
-        <section id="hero">
-            <h1 class="hero-title">Hello, I'm Aji!</h1>
-            <p class="hero-subtitle">Angel Jasmin G. Iruguin — BSIT Student, PUPSJ<br>22 | Pasig City Scholar |
-                Technology and Design</p>
+    <main class="hero">
+        <h1>Hello, I'm Aji.</h1>
+        <p class="subtitle">Angel Jasmin Iruguin — BSIT Student, PUPSJ</p>
+        <p class="subtitle">22 | Pasig City Scholar | Technology and Design</p>
+    </main>
 
-            <div class="about-overview">
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>about me</h2>
+                <div class="line"></div>
+            </div>
+            <p>I'm an Information Technology student passionate about technology, data, and continuous learning.
+                Currently, I'm studying at the Polytechnic University of the Philippines – San Juan Campus, where I've
+                been recognized as a Dean's Lister and a consistent Pasig City Scholar.</p>
 
-                <div class="passport-wrapper">
-                    <img src="images/cmiygl.png" alt="Aji Passport ID" class="passport-img">
+            <p>Here are some technologies I've been working with:</p>
+            <div class="tech-list">
+                <ul>
+                    <li>* Python</li>
+                    <li>* Power BI</li>
+                    <li>* SQL</li>
+                </ul>
+                <ul>
+                    <li>* Java</li>
+                    <li>* JavaScript</li>
+                    <li>* HTML & CSS</li>
+                </ul>
+            </div>
+
+            <p>Outside of academics, I'm nerdy about tech trends, enjoy building side projects, love anything
+                shark-related, and spend a little too much time playing games.</p>
+        </div>
+        <div class="about-image">
+            <img src="cmiygl.png" alt="cmiyglID">
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="section-header">
+            <h2>experience</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="experience-container">
+            <div class="exp-sidebar">
+                <button class="tab-btn active" onclick="openTab(event, 'internship')">Internship</button>
+                <button class="tab-btn" onclick="openTab(event, 'freelance')">Freelance</button>
+            </div>
+
+            <div class="exp-content">
+                <div id="internship" class="tab-content active">
+                    <h3>Manila Klean Fuel Corporation</h3>
+                    <p class="exp-subtitle">IT Technical Support & Information Management Intern<br>March 2026 - May
+                        2026</p>
+                    <ul class="exp-list">
+                        <li><span>></span> Troubleshot printer, network, and workstation issues for office employees
+                            while assisting in LAN connectivity troubleshooting and routine system maintenance.</li>
+                        <li><span>></span> Designed and developed a functional frontend interface for the company's
+                            dedicated project website utilizing HTML, CSS, and JavaScript.</li>
+                        <li><span>></span> Ensured corporate data integrity by tracing discrepancies, actively resolving
+                            dataset errors, and processing and encoding utility billing data within Microsoft Excel to
+                            streamline reporting workflows.</li>
+                    </ul>
                 </div>
 
-                <div class="interests-lists glass-card">
-                    <h3 style="color: var(--accent-teal); margin-bottom: 10px;">Things I love:</h3>
-                    <ul style="list-style: none; margin-bottom: 20px;">
-                        <li>🌸 Exploring tech & design</li>
-                        <li>🎮 Playing games</li>
-                        <li>🎧 Listening to music</li>
-                        <li>☕ Café hopping</li>
-                        <li>✈️ Travelling</li>
-                    </ul>
-                    <h3 style="color: var(--accent-teal); margin-bottom: 10px;">What I do:</h3>
-                    <ul style="list-style: none;">
-                        <li>💻 UI/UX Design & Coding</li>
-                        <li>🎮 Game Development</li>
-                        <li>🤖 3D Model</li>
-                        <li>🎤 Creative Collaboration</li>
+                <div id="freelance" class="tab-content">
+                    <h3>Freelance Multimedia and Graphic Designer</h3>
+                    <p class="exp-subtitle">Commission Based<br>2025 - Present</p>
+                    <ul class="exp-list">
+                        <li><span>></span> Handled various freelance design requests for students and teachers, creating
+                            custom logos, school posters, and high-quality PPTs tailored to their specific assignment
+                            guidelines.</li>
+                        <li><span>></span> Provided multimedia support by doing video editing and designing custom logo
+                            sound effects for school projects, while managing my own client schedules and making sure
+                            everything was submitted on time.</li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="dashboard-section">
-            <h2 class="section-title">Main Dashboard</h2>
-            <div class="dashboard-grid">
+    <section id="education" class="education-section">
+        <div class="section-header">
+            <h2>education</h2>
+            <div class="line"></div>
+        </div>
 
-                <div class="dashboard-card glass-card">
-                    <div class="card-header">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>Work Experience</h3>
+        <div class="edu-container">
+            <div class="edu-card">
+                <h3>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES – SAN JUAN</h3>
+                <p class="edu-subtitle">Bachelor of Science in Information Technology | 2022 – 2026</p>
+                <ul class="edu-list">
+                    <li>Dean's Lister</li>
+                    <li>Technical Member / Technical Head – Pylon Esports (Sept 2024 – Mar 2025)</li>
+                    <li>Creative Director – CNIMedia Multimedia Team (2024 - 2025)</li>
+                </ul>
+            </div>
+
+            <div class="edu-card">
+                <h3>Rizal High School - Pasig City</h3>
+                <p class="edu-subtitle">Science, Technology, Engineering, and Mathematics | 2020 - 2022</p>
+                <ul class="edu-list">
+                    <li>With Honors – Grade 11 & Grade 12</li>
+                    <li>Research Papers: "ThinkOff - A Media Player App to Enhance Learning in Chemistry" (Grade 12)
+                    </li>
+                    <li>"The Impact of Technology on Academic Performance of High School Students in Rizal High School"
+                        (Grade 11)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="projects-header">
+            <div class="title-wrapper">
+                <h2>projects</h2>
+                <div class="line"></div>
+            </div>
+            <a href="more-projects.html" class="view-more">View more projects &rarr;</a>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+
+            <div class="carousel-track" id="projectTrack">
+                <div class="carousel-slide">
+                    <img src="projects_imgs\iskooltoura.png" alt="IsKoolToura Project">
+                    <div class="slide-overlay">
+                        <h3>IsKoolToura - PASIGology</h3>
+                        <p>Co-developed an AR-based mobile application showcasing the historical and cultural
+                            heritage of Pasig City.</p>
+                        <span class="year">2025 - 2026</span>
                     </div>
-
-                    <div class="item-block">
-                        <div class="item-title">Threap (Online Thrift Store) | Pasig</div>
-                        <div class="item-meta">Co-Founder | January 2024 - Present</div>
-                        <ul class="details-list">
-                            <li>Managed social media accounts and online marketing</li>
-                            <li>Edited product photos and handled branding design</li>
-                            <li>Strengthened brand presence and customer engagement through consistent visuals and
-                                content.</li>
-                        </ul>
-                    </div>
-
-                    <div class="item-block">
-                        <div class="item-title">Pylon Esports | PUP San Juan</div>
-                        <div class="item-meta">Technical Member | September 2024 - March 2025</div>
-                        <ul class="details-list">
-                            <li>Supported event logistics for game competitions and watch parties</li>
-                            <li>Designed digital backdrops for live streaming events</li>
-                            <li>Collaborated with tech teams for smooth execution</li>
-                        </ul>
-                    </div>
-
-                    <div class="item-block">
-                        <div class="item-title">Freelance Project</div>
-                        <div class="item-meta">Presentation Designer | October 2025 (1 Week)</div>
-                        <ul class="details-list">
-                            <li>Completed a paid commission creating 36 PowerPoint presentations within a strict
-                                one-week deadline.</li>
-                            <li>Demonstrated strong organizational skills and time management to ensure high-quality
-                                delivery under pressure.</li>
-                        </ul>
-                    </div>
-
+                    </a>
                 </div>
 
-                <div class="dashboard-card glass-card">
-                    <div class="card-header">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Education</h3>
-                    </div>
-
-                    <div class="item-block">
-                        <div class="item-title">Polytechnic University of the Philippines - San Juan City</div>
-                        <div class="item-meta">BS in Information Technology</div>
-                        <ul class="details-list">
-                            <li>Dean's Lister</li>
-                            <li>Consistent Pasig City Scholar</li>
-                            <li>Creative Director in CNIMedia</li>
-                            <li>Salesforce Virtual Internship - Ongoing (2025)</li>
-                        </ul>
-                    </div>
-
-                    <div class="item-block">
-                        <div class="item-title">Rizal High School - Pasig City</div>
-                        <div class="item-meta">STEM Strand</div>
-                        <ul class="details-list">
-                            <li>Academic Awardee (With Honors) – Grade 11 & Grade 12</li>
-                            <li>Research Papers: "ThinkOff – A Media Player App to Enhance Learning in Chemistry" (Grade
-                                12)</li>
-                            <li>"The Impact of Technology on Academic Performance of High School Students in Rizal High
-                                School" (Grade 11)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="dashboard-card glass-card">
-                    <div class="card-header">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Projects</h3>
-                    </div>
-
-                    <div class="item-block">
-                        <div class="item-title">IsKoolToura: PASIGology | PUP San Juan</div>
-                        <div class="item-meta">Graphic Designer | October 2024 - Present</div>
-                        <ul class="details-list">
-                            <li>Created 2D pixel art assets and 3D models for the AR-based educational game.</li>
-                            <li>Designed the app's UI/UX in Figma, ensuring an intuitive and visually engaging
-                                experience.</li>
-                            <li>Collaborated with the development team to align visuals with gameplay and storytelling.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="item-block">
-                        <div class="item-title">Vintage Photobooth (Personal Project)</div>
-                        <div class="item-meta">HTML/CSS/JS Development | Pet Project</div>
-                        <ul class="details-list">
-                            <li>A fully responsive web application that simulates a vintage-style photobooth experience.
-                            </li>
-                            <li>Developed using modern HTML, CSS for styling, and JavaScript for interactive webcam
-                                capture and photo processing.</li>
-                            <li>Features a simplified user interface focused on capturing and downloading stylized
-                                images.</li>
-                            <li><a href="https://ajimalone.github.io/vintage-photobooth/vin.html" target="_blank">View
-                                    Live
-                                    Demo</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="dashboard-card glass-card">
-                    <div class="card-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Skills</h3>
-                    </div>
-
-                    <div class="skills-wrapper">
-                        <ul class="skills-text-list details-list">
-                            <li>Basic computer literacy (MS Office, Google Workspace)</li>
-                            <li>Video editing (CapCut)</li>
-                            <li>Multimedia design (Canva, Procreate, Adobe Creative)</li>
-                            <li>Game development basics (Unity, Godot, Blender)</li>
-                            <li>Problem-solving, Communication, Teamwork, Adaptability</li>
-                        </ul>
-
-                        <div class="skills-icons">
-                            <i class="fab fa-figma skill-icon" title="Figma"></i>
-                            <i class="fas fa-video skill-icon" title="CapCut"></i>
-                            <i class="fas fa-pen-nib skill-icon" title="Procreate/Design"></i>
-                            <i class="fab fa-html5 skill-icon" title="HTML5"></i>
-                            <i class="fab fa-css3-alt skill-icon" title="CSS3"></i>
-                            <i class="fab fa-js skill-icon" title="JavaScript"></i>
+                <div class="carousel-slide">
+                    <a href="https://ilanghourskana.netlify.app/" class="project-link">
+                        <img src="projects_imgs\ojttracker.png" alt="Ilanghourskana Project">
+                        <div class="slide-overlay">
+                            <h3>Ilanghourskana?</h3>
+                            <p>Developed a functional DTR tracking web application featuring date sorting, filtering
+                                capabilities, and a data-driven dashboard.</p>
+                            <span class="year">2026</span>
                         </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="art" class="artworks-section">
+        <div class="projects-header">
+            <div class="title-wrapper">
+                <h2>artworks</h2>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="art-grid">
+
+            <div class="art-grid">
+                <a href="more-artworks.html#3d-models" class="art-card">
+                    <img src="artworks_imgs\3dmodels.png" alt="3D Models">
+                    <div class="art-overlay">
+                        <h3>3d models</h3>
                     </div>
-                </div>
+                </a>
 
+                <a href="more-artworks.html#commissions" class="art-card">
+                    <img src="artworks_imgs\aprilreads.png" alt="Commissions">
+                    <div class="art-overlay">
+                        <h3>commissions</h3>
+                    </div>
+                </a>
+
+                <a href="more-artworks.html#pixel-art" class="art-card">
+                    <img src="artworks_imgs\more-artworks\pixels.png" alt="Pixel Art">
+                    <div class="art-overlay">
+                        <h3>pixel art</h3>
+                    </div>
+                </a>
+
+                <a href="more-artworks.html#logos" class="art-card">
+                    <img src="artworks_imgs\logos.png" alt="Logos">
+                    <div class="art-overlay">
+                        <h3>logos</h3>
+                    </div>
+                </a>
             </div>
-        </section>
+    </section>
 
-        <footer id="contact">
-            <div class="contact-section">
-
-                <h2 class="section-title">Contact me</h2>
-
-                <div class="contact-box">
-                    <a href="mailto:angel.iruguin17@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> angel.iruguin17@gmail.com
-                    </a>
-
-                    <a href="tel:09267152553" class="contact-link">
-                        <i class="fas fa-phone"></i> 09267152553
-                    </a>
-
-                    <a href="https://github.com/ajimalone" target="_blank" class="contact-link">
-                        <i class="fab fa-github"></i> github.com/ajimalone
-                    </a>
-
-                    <a href="https://linkedin.com/in/angeljasmin" target="_blank" class="contact-link">
-                        <i class="fab fa-linkedin"></i> linkedin.com/angeljasmin
-                    </a>
-                </div>
-
+    <section id="certification" class="cert-section">
+        <div class="projects-header">
+            <div class="title-wrapper">
+                <h2>certificates</h2>
+                <div class="line"></div>
             </div>
-        </footer>
+            <a href="https://www.credly.com/users/iruguin-angel/badges#credly" target="_blank" class="view-more">View
+                more on Credly &rarr;</a>
+        </div>
 
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon-ring">
+                    <svg viewBox="0 0 24 24" fill="#00a1e0" class="cert-logo-svg">
+                        <path
+                            d="M19.36 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.36 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96z" />
+                    </svg>
+                </div>
+                <h3>Virtual Internship</h3>
+                <p class="cert-issuer">SALESFORCE</p>
+                <span class="cert-date">Issued 2025</span>
+            </div>
 
+            <div class="cert-card">
+                <div class="cert-icon-ring">
+                    <svg viewBox="0 0 24 24" fill="#4fd1c5" class="cert-logo-svg">
+                        <path
+                            d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z" />
+                    </svg>
+                </div>
+                <h3>Pasig City Scholar</h3>
+                <p class="cert-issuer">PASIG CITY GOVERNMENT</p>
+                <span class="cert-date">2022 - 2026</span>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon-ring">
+                    <svg viewBox="0 0 24 24" fill="#fbbf24" class="cert-logo-svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                </div>
+                <h3>President's Lister</h3>
+                <p class="cert-issuer">PUPSJ</p>
+                <span class="cert-date">Multiple Semesters</span>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon-ring">
+                    <svg viewBox="0 0 24 24" fill="#f87171" class="cert-logo-svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                </div>
+                <h3>Dean's Lister</h3>
+                <p class="cert-issuer">PUPSJ</p>
+                <span class="cert-date">Multiple Semesters</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Angel Jasmin Iruguin<br>All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
