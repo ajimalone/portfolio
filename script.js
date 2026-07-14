@@ -40,33 +40,67 @@ window.addEventListener('resize', () => {
     track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 });
 
-//MORE-ARTWORKS
-function swap3DModel(thumbElement, newModelSource) {
-    const viewer = document.getElementById('main-3d-viewer');
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalModel = document.getElementById("modal-model");
+    const captionText = document.getElementById("modal-caption");
+    const closeBtn = document.querySelector(".close-modal");
+    const prevBtn = document.getElementById("modal-prev");
+    const nextBtn = document.getElementById("modal-next");
 
-    const currentMainModel = viewer.getAttribute('src');
-    const currentMainImg = viewer.getAttribute('data-preview');
+    const gridItems = Array.from(document.querySelectorAll(".grid-img"));
+    let currentIndex = 0;
 
-    const newMainImg = thumbElement.getAttribute('src');
+    function showItem(index) {
+        if (index < 0) index = gridItems.length - 1;
+        if (index >= gridItems.length) index = 0;
+        currentIndex = index;
 
-    viewer.setAttribute('src', newModelSource);
-    viewer.setAttribute('data-preview', newMainImg);
+        const item = gridItems[currentIndex];
+        const tagName = item.tagName.toLowerCase();
 
-    thumbElement.setAttribute('src', currentMainImg);
+        modalImg.style.display = "none";
+        modalModel.style.display = "none";
 
-    thumbElement.onclick = function () {
-        swap3DModel(this, currentMainModel);
-    };
-}
+        if (tagName === 'img') {
+            modalImg.src = item.src;
+            modalImg.style.display = "block";
+        } else if (tagName === 'model-viewer') {
+            modalModel.src = item.getAttribute('src');
+            modalModel.style.display = "block";
+        }
 
-function swapImage(thumbElement, mainImageId) {
-    const mainImage = document.getElementById(mainImageId);
+        captionText.innerHTML = item.getAttribute("data-desc") || item.alt || "";
+        modal.classList.add("show");
+    }
 
-    const currentMainSrc = mainImage.getAttribute('src');
-    const newMainSrc = thumbElement.getAttribute('src');
+    // Make everything clickable
+    gridItems.forEach((item, index) => {
+        item.style.cursor = "pointer";
+        item.addEventListener("click", () => showItem(index));
+    });
 
-    mainImage.setAttribute('src', newMainSrc);
-    thumbElement.setAttribute('src', currentMainSrc);
-}
+    prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showItem(currentIndex - 1);
+    });
 
+    nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showItem(currentIndex + 1);
+    });
 
+    closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("show");
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (modal.classList.contains("show")) {
+            if (e.key === "ArrowLeft") showItem(currentIndex - 1);
+            if (e.key === "ArrowRight") showItem(currentIndex + 1);
+            if (e.key === "Escape") modal.classList.remove("show");
+        }
+    });
+});

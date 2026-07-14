@@ -22,12 +22,12 @@
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#art">Art</a></li>
-                    <li><a href="#certification">Certification</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#art">Art</a></li>
+                    <li><a href="index.html#certification">Certification</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,94 +56,96 @@
 
     <main class="artworks-page-container">
 
+        <!-- 3D MODELS SECTION -->
         <div id="3d-models" class="art-category">
             <div class="art-cat-header">
                 <a href="index.html#art" class="back-arrow">&larr;</a>
                 <h2>/ 3d models</h2>
                 <div class="line"></div>
             </div>
-            <div class="gallery-wrapper">
-
-                <model-viewer id="main-3d-viewer" src="artworks_imgs/more-artworks/3d/rev-v1.glb"
-                    data-preview="artworks_imgs\more-artworks\3d\revolving.png" alt="A 3D model" auto-rotate
-                    camera-controls class="gallery-main" shadow-intensity="1">
-                </model-viewer>
-
-                <div class="gallery-thumbs">
-                    <img src="artworks_imgs/more-artworks/3d/tisa.png"
-                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/bnt-v1.glb')" class="thumb-img">
-
-                    <img src="artworks_imgs\more-artworks\3d\church.png"
-                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/church-v1.glb')" class="thumb-img">
-
-                    <img src="artworks_imgs\more-artworks\3d\dimas.png"
-                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/dma-v1.glb')" class="thumb-img">
-
-                    <img src="artworks_imgs\more-artworks\3d\rizal.png"
-                        onclick="swap3DModel(this, 'artworks_imgs/more-artworks/3d/rizal-compressed-v1.glb')"
-                        class="thumb-img">
-                </div>
+            <div class="four-col-grid">
+                <model-viewer src="artworks_imgs/more-artworks/3d/rev-v1.glb"
+                    poster="artworks_imgs/more-artworks/3d/revolving.png" alt="Revolving Tower 3D Model" auto-rotate
+                    camera-controls class="grid-img" shadow-intensity="1"></model-viewer>
+                <model-viewer src="artworks_imgs/more-artworks/3d/bnt-v1.glb"
+                    poster="artworks_imgs/more-artworks/3d/tisa.png" alt="Bahay na Tisa 3D Model" auto-rotate
+                    camera-controls class="grid-img" shadow-intensity="1"></model-viewer>
+                <model-viewer src="artworks_imgs/more-artworks/3d/church-v1.glb"
+                    poster="artworks_imgs/more-artworks/3d/church.png" alt="Immaculate Concepcion 3D Model" auto-rotate
+                    camera-controls class="grid-img" shadow-intensity="1"></model-viewer>
+                <model-viewer src="artworks_imgs/more-artworks/3d/dma-v1.glb"
+                    poster="artworks_imgs/more-artworks/3d/dimas.png" alt="Dimas Alang Bakery 3D Model" auto-rotate
+                    camera-controls class="grid-img" shadow-intensity="1"></model-viewer>
             </div>
         </div>
 
+        <!-- COMMISSIONS SECTION -->
         <div id="commissions" class="art-category">
             <div class="art-cat-header">
                 <h2>/ commissions</h2>
                 <div class="line"></div>
-                <a href="#" class="view-more-link">Click here to view more</a>
             </div>
-            <div class="gallery-wrapper">
-                <img id="main-comm" src="artworks_imgs\more-artworks\commish\aprilreads1.png" alt="Commission Main"
-                    class="gallery-main">
-                <div class="gallery-thumbs">
-                    <img src="artworks_imgs\more-artworks\commish\batanes.jpg" onclick="swapImage(this, 'main-comm')"
-                        class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\commish\backdrop.jpg" onclick="swapImage(this, 'main-comm')"
-                        class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\commish\plp2.png" onclick="swapImage(this, 'main-comm')"
-                        class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\commish\poster.jpg" onclick="swapImage(this, 'main-comm')"
-                        class="thumb-img">
-                </div>
+            <div class="four-col-grid">
+                <img src="artworks_imgs/more-artworks/commish/aprilreads1.png" alt="Commission 1" class="grid-img"
+                    data-desc="April Reads 2026 Poster">
+                <img src="artworks_imgs/more-artworks/commish/batanes.jpg" alt="Commission 2" class="grid-img"
+                    data-desc="Batanaes Tourism Brochure">
+                <img src="artworks_imgs/more-artworks/commish/backdrop.jpg" alt="Commission 3" class="grid-img"
+                    data-desc="Pylon Esports Backdrop Design">
+                <img src="artworks_imgs/more-artworks/commish/plp2.png" alt="Commission 4" class="grid-img"
+                    data-desc="22nd Commencement Flyer Design for PLP">
             </div>
         </div>
 
+        <!-- PIXEL ART SECTION -->
         <div id="pixel-art" class="art-category">
             <div class="art-cat-header">
                 <h2>/ pixel art</h2>
                 <div class="line"></div>
-                <a href="#" class="view-more-link">Click here to view more</a>
             </div>
-            <div class="gallery-wrapper">
-                <img src="artworks_imgs\more-artworks\pixel.jpg" alt="Pixel Art Main" class="gallery-main full-width">
-                <div class="gallery-thumbs">
-                    <img src="artworks_imgs\aa.jpg" onclick="swapImage(this, 'main-pixel')" class="thumb-img">
-                </div>
+            <div class="four-col-grid">
+                <img src="artworks_imgs/more-artworks/pixel.jpg" alt="Pixel Art Main" class="grid-img"
+                    data-desc="2D Pixel Art for first concept of IsKoolToura">
+                <img src="artworks_imgs/aa.jpg" alt="Pixel Art character" class="grid-img"
+                    data-desc="Custom Pixel Art Character">
             </div>
         </div>
 
+        <!-- LOGOS SECTION -->
         <div id="logos" class="art-category">
             <div class="art-cat-header">
                 <h2>/ logos</h2>
                 <div class="line"></div>
             </div>
-            <div class="gallery-wrapper">
-                <img id="main-logo" src="artworks_imgs\more-artworks\logo\IsKoolToura.png" alt="Logo Main"
-                    class="gallery-main">
-                <div class="gallery-thumbs">
-                    <img src="artworks_imgs\more-artworks\logo\CNIMedia.png" onclick="swapImage(this, 'main-logo')"
-                        class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\logo\IsKoolToura-icon.png"
-                        onclick="swapImage(this, 'main-logo')" class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\logo\threap.png" onclick="swapImage(this, 'main-logo')"
-                        class="thumb-img">
-                    <img src="artworks_imgs\more-artworks\logo\IsKoolToura.png" onclick="swapImage(this, 'main-logo')"
-                        class="thumb-img">
-                </div>
+            <div class="four-col-grid">
+                <img src="artworks_imgs/more-artworks/logo/IsKoolToura.png" alt="IsKoolToura Logo" class="grid-img"
+                    data-desc="IsKoolToura Logo Design">
+                <img src="artworks_imgs/more-artworks/logo/CNIMedia.png" alt="CNIMedia Logo" class="grid-img"
+                    data-desc="CNIMedia Logo Design">
+                <img src="artworks_imgs/more-artworks/logo/IsKoolToura-icon.png" alt="IsKoolToura Icon" class="grid-img"
+                    data-desc="IsKoolToura App Icon">
+                <img src="artworks_imgs/more-artworks/logo/threap.png" alt="Threap Logo" class="grid-img"
+                    data-desc="Threap Logo Design">
             </div>
         </div>
 
     </main>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+
+        <div id="modal-prev" class="modal-nav">&lsaquo;</div>
+
+        <img class="modal-content" id="modal-img">
+
+        <model-viewer class="modal-content" id="modal-model" auto-rotate camera-controls
+            shadow-intensity="1"></model-viewer>
+
+        <div id="modal-caption"></div>
+
+        <div id="modal-next" class="modal-nav">&rsaquo;</div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
